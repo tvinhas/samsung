@@ -35,6 +35,13 @@
     mode '0700'
   end
 
+  directory '/opt/graphite/storage/log' do
+    owner 'apache'
+    group 'apache'
+    mode '0644'
+    recursive 'true'
+  end
+
   execute 'Populate initial database' do
     command "PYTHONPATH=/opt/graphite/webapp django-admin.py syncdb --settings=graphite.settings --noinput ; chown apache: /opt/graphite/storage/graphite.db"
     not_if { ::File.exists?("/opt/graphite/storage/graphite.db")}
