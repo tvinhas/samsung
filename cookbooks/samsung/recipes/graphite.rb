@@ -39,7 +39,7 @@
     owner 'apache'
     group 'apache'
     mode '0644'
-    recursive 'true'
+    recursive true
   end
 
   execute 'Populate initial database' do
