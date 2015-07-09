@@ -32,6 +32,13 @@
     mode    '0644'
   end
 
+  template "/opt/graphite/conf/carbon.conf" do
+    source  'carbon.conf.erb'
+    owner   'root'
+    group   'root'
+    mode    '0644'
+  end
+
   template "/etc/collectd.conf" do
     source  'collectd.conf.erb'
     owner   'root'
