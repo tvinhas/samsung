@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Authorized Access Only</title>
+</head>
+<body>
+
+<style media="screen" type="text/css">
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -158px;
+    margin-top: -490px; 
+}
+
+h1
+	{
+	margin: 0;
+	color: red;
+	font-size: 36pt;
+	font-weight: normal;
+	line-height: 80px;
+        text-shadow: rgba(0,0,0,0.7) 1px 1px 2px;
+	}
+
+h2
+	{
+	color: #4b9fd7;
+	text-align: center;
+	font-size: 13pt;
+	margin: 0 0 10px 0;
+	margin-left: -158px;
+	}
+
+body
+	{
+	margin: 0;
+	background-color: white;
+	color: black;
+	font-family: Tahoma, Geneva, sans-serif;
+	min-width: 945px;
+	}
+
+
+
+</style>
+
+
+<div class='fullscreenDiv'>
+    <div class="center"><h1>Access Denied</h1>
+
+<p><h2>The resource you are trying to access is for authorized personnel only.</h2>
+<h2>Your IP Address will be reported: <!--#echo var="REMOTE_ADDR" --></h2>
+</div></div>
+
+
+
+  <img src="/error/403.png" alt="Forbidden (403)." style="position: absolute; left: 50%; top: 50%; margin-left: -175px; margin-top: -190px;">
+
+</body>
+
+</html>
