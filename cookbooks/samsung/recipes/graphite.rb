@@ -29,6 +29,12 @@
     not_if { ::File.exists?("/opt/graphite/webapp/graphite/storage.py")}
   end
 
+  directory '/opt/graphite/storage' do
+    owner 'apache'
+    group 'apache'
+    mode '0700'
+  end
+
   execute 'Populate initial database' do
     command "PYTHONPATH=/opt/graphite/webapp django-admin.py syncdb --settings=graphite.settings --noinput ; chown apache: /opt/graphite/storage/graphite.db"
     not_if { ::File.exists?("/opt/graphite/storage/graphite.db")}
