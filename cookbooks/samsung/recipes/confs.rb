@@ -2,7 +2,6 @@
 ## Cookbook Name:: samsung
 ## Recipe:: confs
 ## Author:: Thiago Vinhas (<thiago@vinhas.net>)
-##
 #
 
   template "/etc/httpd/conf.d/graphite-httpd.conf" do

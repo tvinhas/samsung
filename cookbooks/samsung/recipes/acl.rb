@@ -2,7 +2,6 @@
 ## Cookbook Name:: samsung
 ## Recipe:: acl
 ## Author:: Thiago Vinhas (<thiago@vinhas.net>)
-##
 #
 
   directory "/home/ec2-user/.ssh" do

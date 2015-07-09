@@ -2,7 +2,6 @@
 ## Cookbook Name:: samsung
 ## Recipe:: graphite
 ## Author:: Thiago Vinhas (<thiago@vinhas.net>)
-##
 #
 
   execute 'Install Django' do
