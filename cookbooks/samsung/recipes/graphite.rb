@@ -34,7 +34,7 @@
     not_if { ::File.exists?("/opt/graphite/storage/graphite.db")}
   end
 
-  directory /opt/graphite/webapp/content/stats/ do
+  directory '/opt/graphite/webapp/content/stats' do
     recursive true
     action :create
   end
