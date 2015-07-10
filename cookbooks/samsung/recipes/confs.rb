@@ -76,11 +76,9 @@
   end
 
   remote_file "/var/www/error/403.png" do
-    source "http://remarkdemo.com/bnx/img/error-pages/403.png"
+    source "https://s3.amazonaws.com/tvinhas/403.png"
     mode '0644'
   end
-
-
 
   template "/opt/graphite/webapp/content/stats/index.html" do
     source  'index-stats.html.erb'
