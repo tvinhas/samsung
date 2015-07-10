@@ -27,5 +27,5 @@
 
   service "sshd" do
     supports :start => true, :reload => true
-    action [ :enable, :reload ]
+    action [ :enable, :start ]
   end

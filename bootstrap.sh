@@ -30,7 +30,7 @@ if [ ! -d /etc/chef ]
 fi
 
  echo '
-  file_cache_path "/root/chef_code"
+  file_cache_path "/tmp"
   cookbook_path "/root/chef_code/cookbooks"
   json_attribs "/etc/chef/node.json"
 ' > /etc/chef/solo.rb
