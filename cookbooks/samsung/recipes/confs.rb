@@ -9,6 +9,7 @@
     owner   'root'
     group   'root'
     mode    '0644'
+    notifies :restart, 'service[httpd]'
   end
 
   template "/opt/graphite/conf/graphite.wsgi" do
@@ -37,6 +38,7 @@
     owner   'root'
     group   'root'
     mode    '0644'
+    notifies :restart, 'service[carbon-cache]'
   end
 
   template "/etc/collectd.conf" do
@@ -44,6 +46,7 @@
     owner   'root'
     group   'root'
     mode    '0644'
+    notifies :restart, 'service[collectd]'
   end
 
   template "/etc/init.d/carbon-cache" do
