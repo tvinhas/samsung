@@ -24,3 +24,8 @@
     supports :start => true, :reload => true
     action [ :enable, :start ]
   end
+
+  service "sshd" do
+    supports :start => true, :reload => true
+    action [ :enable, :reload ]
+  end
