@@ -4,12 +4,12 @@
 ## Author:: Thiago Vinhas (<thiago@vinhas.net>)
 #
 
-  if File.readlines("/etc/httpd/conf/httpd.conf").grep(/Listen 80/).size > 0
-    execute "Change HTTP port" do
-    command 'sed -E -i \'s/Listen 80/Listen 10080/\' /etc/httpd/conf/httpd.conf'
-    action :run
+  template "/etc/httpd/conf/httpd.conf" do
+    source  'httpd.conf.erb'
+    owner   'root'
+    group   'root'
+    mode    '0644'
     notifies :restart, 'service[httpd]'
-    end
   end
 
   template "/etc/httpd/conf.d/graphite-httpd.conf" do
