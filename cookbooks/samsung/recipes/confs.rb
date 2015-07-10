@@ -8,6 +8,7 @@
        execute "Change HTTP port" do
          command 'sed -E -i \'s/Listen 80/Listen 10080/\' /etc/httpd/conf/httpd.conf'
          action :run
+	 notifies :restart, 'service[httpd]'
        end
   end
 
