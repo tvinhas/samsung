@@ -25,11 +25,11 @@
     mode    '0440'
   end
 
-
   if File.readlines("/etc/ssh/sshd_config").grep(/#Port 22/).size > 0
-       execute "Changing SSH port" do
-         command 'sed -E -i \'s/#Port 22/Port 10022/\' /etc/ssh/sshd_config'
-         action :run
-       end
+    execute "Changing SSH port" do
+    command 'sed -E -i \'s/#Port 22/Port 10022/\' /etc/ssh/sshd_config'
+    action :run
+    notifies :restart, 'service[sshd]'
+    end
   end
 
