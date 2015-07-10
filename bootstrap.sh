@@ -10,7 +10,7 @@ fi
 
 # Update packages and install Chef and its dependencies
 yum update -y
-yum install -y gcc automake autoconf libtool make ruby ruby-devel ruby-rdoc rubygems git
+yum install -y libtool ruby ruby-devel rubygems git
 
 # Install cookbook 
 if [ ! -d /root/chef_code ]             
