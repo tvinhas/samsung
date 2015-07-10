@@ -75,12 +75,6 @@
     mode    '0644'
   end
 
-  remote_file "/var/www/error/403.png" do
-    source "http://geeklane.files.wordpress.com/2014/01/error_button.png"
-    mode '0644'
-    not_if { ::File.exists?(install_path) }
-  end
-
   template "/opt/graphite/webapp/content/stats/index.html" do
     source  'index-stats.html.erb'
     owner   'root'
