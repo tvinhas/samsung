@@ -20,6 +20,10 @@
     notifies :restart, 'service[httpd]'
   end
 
+  file "/etc/httpd/conf.d/welcome.conf" do
+    action :delete
+  end
+
   template "/opt/graphite/conf/graphite.wsgi" do
     source  'graphite.wsgi.erb'
     owner   'root'
